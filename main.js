@@ -3,6 +3,7 @@ let count = 0;
 let incrementBtn = document.querySelector("#increment");
 let decrementBtn = document.querySelector("#decrement");
 let counter = document.querySelector("#counter");
+let number = document.querySelector("#display-number");
 
  
 function countDisplay() {
@@ -18,14 +19,14 @@ function countDisplay() {
 
 
 incrementBtn.addEventListener("click", () => {
-    count++ ;
-    counter.innerHTML = count;
+    count+= parseInt(`${counter.value}`);
+    number.innerHTML = `${count}`;
     countDisplay();
   });
   
   decrementBtn.addEventListener("click", () => {
-    count--;
-    counter.innerHTML = count;
+    count-= parseInt(`${counter.value}`);
+    number.innerHTML = `${count}`;
     countDisplay();
   });
   
